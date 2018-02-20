@@ -30,7 +30,7 @@ kdd_labels = [
     "serror_rate",                  # float
     "srv_serror_rate",              # float
     "rerror_rate",                  # float
-    "srv_serror_rate",              # float
+    "srv_rerror_rate",              # float
     "same_srv_rate",                # float
     "diff_srv_rate",                # float
     "srv_diff_host_rate",           # float
@@ -48,7 +48,7 @@ kdd_labels = [
 ]
 
 print("importing KDD'99 database...")
-kdd = pd.read_csv('../../dataset/kddcup.data_10_percent', sep = ',', header = None)
+kdd = pd.read_csv('../dataset/kddcup.data_10_percent', sep = ',', header = None)
 kdd.columns = kdd_labels
 curr_rows = kdd.shape[0]
 print("KDD'99 rows:", curr_rows)
@@ -58,3 +58,11 @@ kdd = kdd.drop_duplicates(keep='first')
 later_rows = kdd.shape[0]
 print("KDD'99 rows:", later_rows)
 print("reduction of", curr_rows - later_rows, "rows")
+
+print("\nreplacing string values with numeric...")
+replace_dictionary = dict.fromkeys(['protocol_type', 'service', 'flag', 'attack_type'])
+for attribute in replace_dictionary.keys():
+    attr_values = kdd.loc[:, attribute].drop_duplicates()
+    replace_dictionary[attribute] = dict( zip( attr_values, np.arange(0.001, (len(attr_values) + 1) * 0.001, 0.001) ) )
+print(replace_dictionary)
+kdd = kdd.replace(replace_dictionary)

@@ -2,10 +2,10 @@ import pandas as pd
 import numpy as np
 
 def import_and_clean(dataset):
-    print("Importing", dataset, ">>")
+    print("importing", dataset, "...")
     data = pd.read_csv("../dataset/" + dataset)
 
-    print("Converting nominal data to numeric >>")
+    print("converting nominal data to numeric...")
     cols = data.select_dtypes('object').columns
     data[cols] = data[cols].apply(lambda x: x.astype('category').cat.codes)
 

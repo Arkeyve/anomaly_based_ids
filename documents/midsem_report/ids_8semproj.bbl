@@ -21,19 +21,25 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{unsw15}
+N.~Moustafa and J.~Slay, ``The significant features of the unsw-nb15 and the
+  kdd99 data sets for network intrusion detection systems,'' in \emph{2015 4th
+  International Workshop on Building Analysis Datasets and Gathering Experience
+  Returns for Security (BADGERS)}, Nov 2015, pp. 25--31.
+
 \bibitem{dm15}
 \BIBentryALTinterwordspacing
-S.~Duque and D.~M.~N. bin Omar. (2015) Using data mining algorithms for
-  developing a model for intrusion detection system (ids). [Online]. Available:
-  \url{https://www.sciencedirect.com/science/article/pii/S1877050915029750}
+S.~Duque and M.~N. bin Omar, ``Using data mining algorithms for developing a
+  model for intrusion detection system (ids),'' \emph{Procedia Computer
+  Science}, vol.~61, pp. 46 -- 51, 2015, complex Adaptive Systems San Jose, CA
+  November 2-4, 2015. [Online]. Available:
+  \url{http://www.sciencedirect.com/science/article/pii/S1877050915029750}
 \BIBentrySTDinterwordspacing
 
 \bibitem{mlp17}
-\BIBentryALTinterwordspacing
-P.~V.~S. Alpano, J.~R.~I. Pedrasa, and R.~Atienza. (2017) Multilayer perceptron
+P.~V.~S. Alpaño, J.~R.~I. Pedrasa, and R.~Atienza, ``Multilayer perceptron
   with binary weights and activations for intrusion detection of cyber-physical
-  systems. [Online]. Available:
-  \url{http://ieeexplore.ieee.org/document/8228342/}
-\BIBentrySTDinterwordspacing
+  systems,'' in \emph{TENCON 2017 - 2017 IEEE Region 10 Conference}, Nov 2017,
+  pp. 2825--2829.
 
 \end{thebibliography}

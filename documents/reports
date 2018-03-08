@@ -1,0 +1,5 @@
+In [3]: %timeit kmeans.fit(train.iloc[:, :-2])
+14.7 s +- 396 ms per loop (mean +- std. dev. of 7 runs, 1 loop each)
+
+In [4]: %timeit kmeans.predict(test.iloc[:, :-2])
+543 ms +- 959 us per loop (mean +- std. dev. of 7 runs, 1 loop each)

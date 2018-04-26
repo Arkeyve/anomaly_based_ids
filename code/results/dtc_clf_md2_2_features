@@ -1,0 +1,16 @@
+digraph Tree {
+node [shape=box, style="filled", color="black"] ;
+0 [label=<sttl &le; 61.0<br/>gini = 0.061<br/>samples = 700000<br/>value = [677785, 22215]<br/>class = normal>, fillcolor="#e58139f7"] ;
+1 [label=<ct_state_ttl &le; 1.0<br/>gini = 0.0<br/>samples = 672422<br/>value = [672380, 42]<br/>class = normal>, fillcolor="#e58139ff"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<gini = 0.0<br/>samples = 670632<br/>value = [670632, 0]<br/>class = normal>, fillcolor="#e58139ff"] ;
+1 -> 2 ;
+3 [label=<gini = 0.046<br/>samples = 1790<br/>value = [1748, 42]<br/>class = normal>, fillcolor="#e58139f9"] ;
+1 -> 3 ;
+4 [label=<ct_state_ttl &le; 2.5<br/>gini = 0.315<br/>samples = 27578<br/>value = [5405, 22173]<br/>class = attack>, fillcolor="#399de5c1"] ;
+0 -> 4 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+5 [label=<gini = 0.265<br/>samples = 26010<br/>value = [4082, 21928]<br/>class = attack>, fillcolor="#399de5d0"] ;
+4 -> 5 ;
+6 [label=<gini = 0.264<br/>samples = 1568<br/>value = [1323, 245]<br/>class = normal>, fillcolor="#e58139d0"] ;
+4 -> 6 ;
+}

@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex ids_8semproj"] 1520488367 "ids_8semproj.aux" "ids_8semproj.bbl" "ids_8semproj" 1520488368
+["bibtex ids_8semproj"] 1520612367 "ids_8semproj.aux" "ids_8semproj.bbl" "ids_8semproj" 1520661567
   "./IEEEtran.bst" 1516075919 59215 bc5380b3434a66b895bbc75d3d380540 ""
-  "ids_8semproj.aux" 1520488368 2446 1a70437d49efd621d6e9d4229420d9c5 ""
-  "references.bib" 1520356126 2150 091741a66b331cf140f1ec32d344c2ac ""
+  "ids_8semproj.aux" 1520661567 2431 f11c4be26831ade2e222495e79d9450f ""
+  "references.bib" 1520602937 2125 60ce0cabe2dc6750696ba5e640bc33e7 ""
   (generated)
-  "ids_8semproj.blg"
   "ids_8semproj.bbl"
-["pdflatex"] 1520488367 "ids_8semproj.tex" "ids_8semproj.pdf" "ids_8semproj" 1520488368
+  "ids_8semproj.blg"
+["pdflatex"] 1520661567 "ids_8semproj.tex" "ids_8semproj.pdf" "ids_8semproj" 1520661567
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1520157216 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1520157226 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1520157226 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -75,13 +75,17 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1520406606 2698543 2cf52b79017c8ffffb2822ab477d393f ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1520406598 7738160 0923961d4e72b2514cebd927a2d4ba99 ""
   "MITLogo.jpg" 1516075919 48556 b1ebd30fa4fc3fd82032fd2e8299dde4 ""
-  "ids_8semproj.aux" 1520488368 2446 1a70437d49efd621d6e9d4229420d9c5 ""
-  "ids_8semproj.bbl" 1520488367 1879 547afd70b63ca559f721596ed7073fde "bibtex ids_8semproj"
-  "ids_8semproj.tex" 1520488365 18555 beec16e0fc99a4d960e61673786b18b7 ""
+  "ids_8semproj.aux" 1520661567 2431 f11c4be26831ade2e222495e79d9450f ""
+  "ids_8semproj.bbl" 1520612367 1854 815f286725c9209f9ecdbb845383d2c4 "bibtex ids_8semproj"
+  "ids_8semproj.lof" 1520661567 343 4e02d4d3a5efab983076892ae577ca12 ""
+  "ids_8semproj.tex" 1520661565 20220 f0038616d1a24f8f31189a3212dc314f ""
+  "ids_8semproj.toc" 1520661567 1285 c0159787b4962379e87c6c2191b69d74 ""
   "kmeans.jpg" 1520486641 17064 35a88d4cef70f8d13e0c2b113f225f9a ""
   "methodology.jpg" 1516183275 90240 f500c97414fae6cfeb9ae5b7db88ac53 ""
   "preprocessing.jpg" 1520486156 39411 e8d65702e7dacc2e64ed87c92aab4def ""
   (generated)
-  "ids_8semproj.aux"
-  "ids_8semproj.pdf"
   "ids_8semproj.log"
+  "ids_8semproj.toc"
+  "ids_8semproj.pdf"
+  "ids_8semproj.aux"
+  "ids_8semproj.lof"

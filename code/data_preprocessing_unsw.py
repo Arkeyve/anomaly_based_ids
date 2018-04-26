@@ -15,6 +15,3 @@ def import_and_clean(dataset):
     data[cols] = data[cols].apply(lambda x: x.astype('category').cat.codes)
 
     return data
-
-train = import_and_clean("UNSW-NB15_1.csv")
-test = import_and_clean("UNSW-NB15_2.csv")

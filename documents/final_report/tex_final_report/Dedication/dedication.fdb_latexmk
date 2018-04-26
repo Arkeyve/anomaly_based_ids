@@ -1,0 +1,9 @@
+# Fdb version 3
+["pdflatex"] 1524723690 "dedication.tex" "dedication.pdf" "dedication" 1524723690
+  "/usr/share/texmf-dist/web2c/texmf.cnf" 1520157258 32585 d82bbcf7626b7842c87671687479e852 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1520406598 7738160 0923961d4e72b2514cebd927a2d4ba99 ""
+  "dedication.aux" 1524723530 949 f2027e0f4cb62d77060f62ee1dfa7d1b ""
+  "dedication.tex" 1524723688 178 a28009dd7c629747915c1845c6430890 ""
+  (generated)
+  "dedication.pdf"
+  "dedication.log"

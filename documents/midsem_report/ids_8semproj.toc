@@ -1,0 +1,27 @@
+\contentsline {section}{\numberline {1}Introduction}{2}
+\contentsline {paragraph}{}{2}
+\contentsline {section}{\numberline {2}Problem Definition}{2}
+\contentsline {paragraph}{}{2}
+\contentsline {section}{\numberline {3}Objective}{2}
+\contentsline {section}{\numberline {4}Scope}{3}
+\contentsline {paragraph}{}{3}
+\contentsline {section}{\numberline {5}Literature Survey}{3}
+\contentsline {paragraph}{}{3}
+\contentsline {paragraph}{}{3}
+\contentsline {paragraph}{}{3}
+\contentsline {section}{\numberline {6}Methodology}{3}
+\contentsline {subsection}{\numberline {6.1}Dataset}{3}
+\contentsline {paragraph}{}{3}
+\contentsline {paragraph}{}{5}
+\contentsline {subsection}{\numberline {6.2}Pre-processing}{6}
+\contentsline {paragraph}{}{6}
+\contentsline {subsection}{\numberline {6.3}K-Means}{7}
+\contentsline {paragraph}{}{7}
+\contentsline {subsection}{\numberline {6.4}Multilayer Perceptron}{7}
+\contentsline {paragraph}{}{7}
+\contentsline {subsection}{\numberline {6.5}Performance Paramters}{7}
+\contentsline {section}{\numberline {7}Work done so far}{8}
+\contentsline {subsection}{\numberline {7.1}Dataset}{8}
+\contentsline {subsection}{\numberline {7.2}Pre-processing}{9}
+\contentsline {subsection}{\numberline {7.3}K-Means}{9}
+\contentsline {section}{\numberline {8}Remaining work}{9}

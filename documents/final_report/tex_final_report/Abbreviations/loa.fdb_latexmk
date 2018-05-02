@@ -1,0 +1,11 @@
+# Fdb version 3
+["pdflatex"] 1525199985 "loa.tex" "loa.pdf" "loa" 1525199985
+  "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1520157216 3332 103109f5612ad95229751940c61aada0 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1520157226 1328 c834bbb027764024c09d3d2bf908b5f0 ""
+  "/usr/share/texmf-dist/web2c/texmf.cnf" 1520157258 32585 d82bbcf7626b7842c87671687479e852 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1520406598 7738160 0923961d4e72b2514cebd927a2d4ba99 ""
+  "loa.aux" 1525199915 946 053978b823606b11b60f0edd1b6fb8f2 ""
+  "loa.tex" 1525199984 319 a53e8e879bf02d180b944a1f410f73f0 ""
+  (generated)
+  "loa.log"
+  "loa.pdf"

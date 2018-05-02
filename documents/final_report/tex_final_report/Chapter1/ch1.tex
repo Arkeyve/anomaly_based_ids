@@ -1,17 +1,11 @@
 
-\chapter{Chapter Title}
+\chapter{Introduction}
 \label{ch:INTR}
-\section{Section 1}
-Electronic reference is given in \cite{sh07}. Journal article is given in \cite{odo95}. Article from conference is given in \cite{gs97}. Material from book \cite{cu72}. Manual detail is given in \cite{mo96}. Detail of technical report is given in \cite{jrc87}. A master thesis \cite{ka99} has been referred. A PhD thesis \cite{li2000} has been referred. Last referenec is taken from \cite{ro94}.
-\begin{definition}
-vvhffff
-\end{definition}
-
-\begin{figure}[bpht]
-\includegraphics{Chapter1/LHTL}
-\caption{Learning how to learn}
-\end{figure}
-
-\begin{definition}
-fffffff
-\end{definition}
+\section{Background}
+An Intrusion Detection System (IDS) is an application that can be installed on a system or a network and monitor the host for activity. The application may be a piece of software, or a device that can be plugged into the interface as a module. The IDS, once plugged into the system, scans for activity, and based on various features pertaining to the activity, classifies it as normal, or malicious. It must be noted that the IDS itself does not provide any access control, and is only responsible for the \textit{detection} of an attack. As a result, IDSs must be bundled with other tools to prevent an attack. Typically, all detected malicious activity is reported to a Security Information and Event Management (SIEM) system, which combines reports from multiple sources and uses alarm filtering techniques to distinguish malicious activity from false alarms.\\
+\\
+On the basis of method of detection, there are two types of IDSs \cite{ids_taxonomy}.
+\begin{itemize}
+    \item \textbf{Knowledge Based}: These IDSs accumulate knowledge about attacks and look for similar data to detect an attack. This results in failure to detect novel attacks as data about them may not be accumulated in the knowledge base.
+    \item \textbf{Behavior Based}:
+\end{itemize}

@@ -1,0 +1,11 @@
+# Fdb version 3
+["pdflatex"] 1525170200 "certificate.tex" "certificate.pdf" "certificate" 1525170200
+  "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1520157216 3332 103109f5612ad95229751940c61aada0 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1520157226 1328 c834bbb027764024c09d3d2bf908b5f0 ""
+  "/usr/share/texmf-dist/web2c/texmf.cnf" 1520157258 32585 d82bbcf7626b7842c87671687479e852 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1520406598 7738160 0923961d4e72b2514cebd927a2d4ba99 ""
+  "certificate.aux" 1525170122 951 c37b9ac73527ff1339ff6c55c2215777 ""
+  "certificate.tex" 1525170198 1049 4287709c6bbe17cc6e975eef23fae503 ""
+  (generated)
+  "certificate.pdf"
+  "certificate.log"

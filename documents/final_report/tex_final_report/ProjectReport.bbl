@@ -21,49 +21,12 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{sh07}
+\bibitem{ids_taxonomy}
 \BIBentryALTinterwordspacing
-M.~Shell. (2007) {IEEE}tran webpage on {CTAN}. [Online]. Available:
-  \url{http://www.ctan.org/tex-archive/macros/latex/contrib/IEEEtran/}
+H.~Debar, M.~Dacier, and A.~Wespi, ``A revised taxonomy for intrusion-detection
+  systems,'' \emph{Annales Des T{\'e}l{\'e}communications}, vol.~55, no.~7, pp.
+  361--378, Jul 2000. [Online]. Available:
+  \url{https://doi.org/10.1007/BF02994844}
 \BIBentrySTDinterwordspacing
-
-\bibitem{odo95}
-Y.~Okada, K.~Dejima, and T.~Ohishi, ``Analysis and comparison of {PM}
-  synchronous motor and induction motor type magnetic bearings,'' \emph{IEEE
-  Trans. on EE}, vol.~31, pp. 1047--1053, Sep./Oct. 1995.
-
-\bibitem{gs97}
-R.~K. Gupta and S.~D. Senturia, ``Pull-in time dynamics as a measure of
-  absolute pressure,'' in \emph{Proc. {IEEE} International Workshop on
-  Microelectromechanical Systems ({MEMS}'97)}, Nagoya, Japan, Jan. 1997, pp.
-  290--294.
-
-\bibitem{cu72}
-B.~D. Cullity, \emph{Introduction to Magnetic Materials}.\hskip 1em plus 0.5em
-  minus 0.4em\relax Reading, MA: Addison-Wesley, 1972.
-
-\bibitem{mo96}
-\emph{{FLEXChip} Signal Processor ({MC68175/D})}, Motorola, 1996.
-
-\bibitem{jrc87}
-R.~Jain, K.~K. Ramakrishnan, and D.~M. Chiu, ``Congestion avoidance in computer
-  networks with a connectionless network layer,'' Digital Equipment
-  Corporation, MA, Tech. Rep. DEC-TR-506, Aug 1987.
-
-\bibitem{ka99}
-A.~Karnik, ``Performance of {TCP} congestion control with rate feedback:
-  {TCP/ABR} and rate adaptive {TCP/IP},'' M. Eng. thesis, Indian Institute of
-  Science, Bangalore, India, jan 1999.
-
-\bibitem{li2000}
-\BIBentryALTinterwordspacing
-Q.~Li, ``Delay characterization and performance control of wide-area
-  networks,'' Ph.D. dissertation, Univ. of Delaware, Newark, May 2000.
-  [Online]. Available: \url{http://www.ece.udel.edu/~qli}
-\BIBentrySTDinterwordspacing
-
-\bibitem{ro94}
-L.~Roberts, ``Enhanced proportional rate control algorithm {PRCA},'' {ATM}
-  Forum Contribution 94-0735R1, Aug. 1994.
 
 \end{thebibliography}

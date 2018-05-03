@@ -1,12 +1,12 @@
 # Fdb version 3
-["pdflatex"] 1525217897 "ch1.tex" "ch1.pdf" "ch1" 1525217897
+["pdflatex"] 1525291831 "ch1.tex" "ch1.pdf" "ch1" 1525291832
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1520157216 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1520157226 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1520157226 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1520157258 32585 d82bbcf7626b7842c87671687479e852 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1520406598 7738160 0923961d4e72b2514cebd927a2d4ba99 ""
-  "ch1.aux" 1525217878 1266 195dd3baeb3860b629dfbd85e12242ab ""
-  "ch1.tex" 1525217894 1333 7f80d8d61bcb72917b2360231e5123f0 ""
+  "ch1.aux" 1525291596 1341 6c700d64da271f09dc6536cbb04ac580 ""
+  "ch1.tex" 1525291831 1432 b912f2a6c047416216ff322204c0c400 ""
   (generated)
   "ch1.pdf"
   "ch1.log"

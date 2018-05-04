@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.3.7)  3 MAY 2018 02:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.3.7)  4 MAY 2018 02:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -369,7 +369,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 63.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<MITLogo.jpg, id=116, 459.243pt x 61.101pt>
+<MITLogo.jpg, id=124, 459.243pt x 61.101pt>
 File: MITLogo.jpg Graphic file (type jpg)
 <use MITLogo.jpg>
 Package pdftex.def Info: MITLogo.jpg  used on input line 76.
@@ -484,21 +484,34 @@ l.13
 
 
 
-] [2]) [3]
+] [2] [3]) [4]
 \openout2 = `Chapter2/ch2.aux'.
 
  (./Chapter2/ch2.tex
 Chapter 2.
-) [4
+
+Overfull \hbox (4.17879pt too wide) in paragraph at lines 3--3
+[]\OT1/cmr/bx/n/17.28 Taxonomy for In-tru-sion De-tec-tion Sys-tems 
+ []
+
+<Chapter2/types_of_ids.jpg, id=245, 588.1975pt x 638.385pt>
+File: Chapter2/types_of_ids.jpg Graphic file (type jpg)
+<use Chapter2/types_of_ids.jpg>
+Package pdftex.def Info: Chapter2/types_of_ids.jpg  used on input line 11.
+(pdftex.def)             Requested size: 317.9892pt x 345.12213pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[5
 
 
 
-]
+]) [6 <./Chapter2/types_of_ids.jpg>]
 \openout2 = `Chapter3/ch3.aux'.
 
  (./Chapter3/ch3.tex
 Chapter 3.
-) [5
+) [7
 
 
 
@@ -507,7 +520,7 @@ Chapter 3.
 
  (./Chapter4/ch4.tex
 Chapter 4.
-) [6
+) [8
 
 
 
@@ -516,7 +529,7 @@ Chapter 4.
 
  (./Chapter5/ch5.tex
 Chapter 5.
-) [7
+) [9
 
 
 
@@ -525,7 +538,7 @@ Chapter 5.
 
  (./Chapter6/ch6.tex
 Chapter 6.
-) [8
+) [10
 
 
 
@@ -534,11 +547,11 @@ Chapter 6.
 
  (./Chapter7/ch7.tex
 Chapter 7.
-) [9
+) [11
 
 
 
-] [10
+] [12
 
 
 ]
@@ -546,14 +559,17 @@ Chapter 7.
 
  (./Appendix/appendix.tex
 Appendix A.
-[11
+[13
 
 
-] [12] [13] [14] [15] [16] [17] [18] [19]
+] [14] [15] [16] [17] [18] [19] [20] [21]
 Appendix B.
-[20
+[22
 
-] [21] [22]) [23] (./ProjectReport.bbl) [24
+] [23] [24]) [25] (./ProjectReport.bbl
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ± in font cmr12!
+) [26
 
 
 ]
@@ -584,29 +600,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--36
 
  []
 
-) [25]
+) [27]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 130.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 130.
  (./ProjectReport.aux (./Dedication/dedication.aux) (./Declaration/declaration.aux) (./Certificate/certificate.aux) (./Acknowledgements/ack.aux) (./Abstract/abstract.aux) (./Abbreviations/loa.aux) (./Notation/notations.aux) (./Chapter1/ch1.aux) (./Chapter2/ch2.aux) (./Chapter3/ch3.aux) (./Chapter4/ch4.aux) (./Chapter5/ch5.aux) (./Chapter6/ch6.aux) (./Chapter7/ch7.aux) (./Appendix/appendix.aux) (./ProjectDetail/PD.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 130.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 130.
 Package rerunfilecheck Info: File `ProjectReport.out' has not changed.
-(rerunfilecheck)             Checksum: B3C6B730B56E192563A703AB4132D7F0;1553.
+(rerunfilecheck)             Checksum: 757C251CE8BA8AF16E547DE2E8AF0C26;1714.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 130.
  ) 
 Here is how much of TeX's memory you used:
- 6993 strings out of 492982
- 98499 string characters out of 6138580
- 204446 words of memory out of 5000000
- 10254 multiletter control sequences out of 15000+600000
+ 7015 strings out of 492982
+ 98783 string characters out of 6138580
+ 204551 words of memory out of 5000000
+ 10263 multiletter control sequences out of 15000+600000
  13184 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  28i,10n,43p,1297b,566s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on ProjectReport.pdf (37 pages, 239495 bytes).
+Output written on ProjectReport.pdf (39 pages, 296856 bytes).
 PDF statistics:
- 385 PDF objects out of 1000 (max. 8388607)
- 329 compressed objects within 4 object streams
- 70 named destinations out of 1000 (max. 500000)
- 238 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 420 PDF objects out of 1000 (max. 8388607)
+ 361 compressed objects within 4 object streams
+ 82 named destinations out of 1000 (max. 500000)
+ 259 words of extra memory for PDF output out of 10000 (max. 10000000)
 

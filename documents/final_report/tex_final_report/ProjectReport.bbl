@@ -29,4 +29,10 @@ H.~Debar, M.~Dacier, and A.~Wespi, ``A revised taxonomy for intrusion-detection
   \url{https://doi.org/10.1007/BF02994844}
 \BIBentrySTDinterwordspacing
 
+\bibitem{mlp_17}
+P.~V.~S. Alpaño, J.~R.~I. Pedrasa, and R.~Atienza, ``Multilayer perceptron
+  with binary weights and activations for intrusion detection of cyber-physical
+  systems,'' in \emph{TENCON 2017 - 2017 IEEE Region 10 Conference}, Nov 2017,
+  pp. 2825--2829.
+
 \end{thebibliography}

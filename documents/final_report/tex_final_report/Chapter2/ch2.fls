@@ -1,0 +1,7 @@
+PWD /run/media/archive/study/projects/ids_8semproj/documents/final_report/tex_final_report/Chapter2
+INPUT /usr/share/texmf-dist/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
+INPUT ch2.tex
+OUTPUT ch2.log
+INPUT /usr/share/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm

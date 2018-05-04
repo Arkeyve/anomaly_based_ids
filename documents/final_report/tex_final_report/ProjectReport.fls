@@ -215,6 +215,9 @@ INPUT /usr/share/texmf-dist/tex/latex/base/omscmr.fd
 OUTPUT Chapter2/ch2.aux
 INPUT Chapter2/ch2.tex
 INPUT Chapter2/ch2.tex
+INPUT Chapter2/types_of_ids.jpg
+INPUT ./Chapter2/types_of_ids.jpg
+INPUT ./Chapter2/types_of_ids.jpg
 OUTPUT Chapter3/ch3.aux
 INPUT Chapter3/ch3.tex
 INPUT Chapter3/ch3.tex

@@ -19,3 +19,23 @@ A third type of IDS is also often seen in literature, called the \textbf{hybrid 
 
 \paragraph{}
 Thus, choosing the right behavior based model becomes an important part of building an IDS. Knowledge based systems are not future proof, and it is often too late for a system or a network to be affected by an attacker even once, regardless of how well the IDS reports subsequent activities of the same. Hybrid systems may provide quick classification, but are bottle-necked by the high false positive rate of the behavior based model used.
+
+\section{Objectives}
+
+\paragraph{}
+The broad objective of this study was to compare different machine learning and data mining models on the basis of their accuracy as well as execution time.\\
+Specifically, the objectives can be broken down to the following:
+\begin{itemize}
+    \item To determine useful features in classifying network data.
+    \item To find appropriate measures to score the different models.
+    \item To study the causes of different models performing differently.
+    \item To open scope for future studies to improve the given score.
+\end{itemize}
+
+\section{Limitations of Study}
+
+\begin{itemize}
+    \item The study has been conducted with a static database for training and testing. Although the dataset has been curated fairly recently (2015), it is at best, a rough approximate of live data flowing through a network.
+    \item Many complex algorithms (such as deep neural networks, multi-layer perceptron etc.) which have proved to be very accurate have not been tested simply because the execution time of these algorithms were too high for it to fetch a comparable score.
+    \item Although \cite{mlp_17} suggests a faster and efficient way to implement a multi-layer perceptron with binary weights, it has also claimed a reduction of accuracy by up to 4 times for the same, and hence has not been considered in the comparison.
+\end{itemize}

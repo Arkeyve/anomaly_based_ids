@@ -1,0 +1,36 @@
+digraph Tree {
+node [shape=box, style="filled", color="black"] ;
+0 [label=<sttl &le; 61.0<br/>gini = 0.061<br/>samples = 700000<br/>value = [677785, 22215]<br/>class = normal>, fillcolor="#e58139f7"] ;
+1 [label=<ct_state_ttl &le; 1.0<br/>gini = 0.0<br/>samples = 672422<br/>value = [672380, 42]<br/>class = normal>, fillcolor="#e58139ff"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<gini = 0.0<br/>samples = 670632<br/>value = [670632, 0]<br/>class = normal>, fillcolor="#e58139ff"] ;
+1 -> 2 ;
+3 [label=<gini = 0.046<br/>samples = 1790<br/>value = [1748, 42]<br/>class = normal>, fillcolor="#e58139f9"] ;
+1 -> 3 ;
+4 [label=<ct_state_ttl &le; 2.5<br/>gini = 0.315<br/>samples = 27578<br/>value = [5405, 22173]<br/>class = attack>, fillcolor="#399de5c1"] ;
+0 -> 4 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+5 [label=<ct_state_ttl &le; 0.5<br/>gini = 0.265<br/>samples = 26010<br/>value = [4082, 21928]<br/>class = attack>, fillcolor="#399de5d0"] ;
+4 -> 5 ;
+6 [label=<sttl &le; 254.5<br/>gini = 0.058<br/>samples = 436<br/>value = [423, 13]<br/>class = normal>, fillcolor="#e58139f7"] ;
+5 -> 6 ;
+7 [label=<gini = 0.005<br/>samples = 414<br/>value = [413, 1]<br/>class = normal>, fillcolor="#e58139fe"] ;
+6 -> 7 ;
+8 [label=<gini = 0.496<br/>samples = 22<br/>value = [10, 12]<br/>class = attack>, fillcolor="#399de52a"] ;
+6 -> 8 ;
+9 [label=<ct_state_ttl &le; 1.5<br/>gini = 0.245<br/>samples = 25574<br/>value = [3659, 21915]<br/>class = attack>, fillcolor="#399de5d4"] ;
+5 -> 9 ;
+10 [label=<gini = 0.346<br/>samples = 12152<br/>value = [2706, 9446]<br/>class = attack>, fillcolor="#399de5b6"] ;
+9 -> 10 ;
+11 [label=<gini = 0.132<br/>samples = 13422<br/>value = [953, 12469]<br/>class = attack>, fillcolor="#399de5ec"] ;
+9 -> 11 ;
+12 [label=<sttl &le; 158.0<br/>gini = 0.264<br/>samples = 1568<br/>value = [1323, 245]<br/>class = normal>, fillcolor="#e58139d0"] ;
+4 -> 12 ;
+13 [label=<gini = 0.178<br/>samples = 497<br/>value = [448, 49]<br/>class = normal>, fillcolor="#e58139e3"] ;
+12 -> 13 ;
+14 [label=<ct_state_ttl &le; 5.5<br/>gini = 0.299<br/>samples = 1071<br/>value = [875, 196]<br/>class = normal>, fillcolor="#e58139c6"] ;
+12 -> 14 ;
+15 [label=<gini = 0.355<br/>samples = 607<br/>value = [467, 140]<br/>class = normal>, fillcolor="#e58139b3"] ;
+14 -> 15 ;
+16 [label=<gini = 0.212<br/>samples = 464<br/>value = [408, 56]<br/>class = normal>, fillcolor="#e58139dc"] ;
+14 -> 16 ;
+}

@@ -3,29 +3,35 @@
 \BOOKMARK [0][-]{chapter*.2}{List of Tables}{}% 3
 \BOOKMARK [0][-]{chapter*.3}{List of Figures}{}% 4
 \BOOKMARK [0][-]{chapter*.3}{Abbreviations}{}% 5
-\BOOKMARK [0][-]{chapter*.3}{Notations}{}% 6
-\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 7
-\BOOKMARK [1][-]{section.1.1}{Background}{chapter.1}% 8
-\BOOKMARK [1][-]{section.1.2}{Objectives}{chapter.1}% 9
-\BOOKMARK [1][-]{section.1.3}{Limitations of Study}{chapter.1}% 10
-\BOOKMARK [0][-]{chapter.2}{Literature Review}{}% 11
-\BOOKMARK [1][-]{section.2.1}{Taxonomy for Intrusion Detection Systems}{chapter.2}% 12
-\BOOKMARK [0][-]{chapter.3}{Chapter Title}{}% 13
-\BOOKMARK [1][-]{section.3.1}{ffffh}{chapter.3}% 14
-\BOOKMARK [0][-]{chapter.4}{Chapter Title}{}% 15
-\BOOKMARK [1][-]{section.4.1}{abvvv}{chapter.4}% 16
-\BOOKMARK [0][-]{chapter.5}{Chapter Title}{}% 17
-\BOOKMARK [1][-]{section.5.1}{ghf}{chapter.5}% 18
-\BOOKMARK [0][-]{chapter.6}{Chapter Title}{}% 19
-\BOOKMARK [1][-]{section.6.1}{vvvvv}{chapter.6}% 20
-\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 21
-\BOOKMARK [1][-]{section.7.1}{fff}{chapter.7}% 22
-\BOOKMARK [0][-]{section*.11}{Appendices}{}% 23
-\BOOKMARK [0][-]{appendix.A}{Code \(if required\)}{}% 24
-\BOOKMARK [1][-]{section.A.1}{Kerberos Protocol}{appendix.A}% 25
-\BOOKMARK [1][-]{section.A.2}{Kerberos Protocol with Freshness Concept}{appendix.A}% 26
-\BOOKMARK [0][-]{appendix.B}{Trace Files}{}% 27
-\BOOKMARK [1][-]{section.B.1}{Replay Attack}{appendix.B}% 28
-\BOOKMARK [1][-]{section.B.2}{Replay Attack overcome using Freshness Concept}{appendix.B}% 29
-\BOOKMARK [0][-]{section.B.2}{References}{}% 30
-\BOOKMARK [0][-]{appendix*.12}{ProjectDetail}{}% 31
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 6
+\BOOKMARK [1][-]{section.1.1}{Background}{chapter.1}% 7
+\BOOKMARK [1][-]{section.1.2}{Objectives}{chapter.1}% 8
+\BOOKMARK [1][-]{section.1.3}{Limitations of Study}{chapter.1}% 9
+\BOOKMARK [0][-]{chapter.2}{Literature Review}{}% 10
+\BOOKMARK [1][-]{section.2.1}{Taxonomy for Intrusion Detection Systems}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.2}{Datasets}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.3}{UNSW-NB15}{chapter.2}% 13
+\BOOKMARK [1][-]{section.2.4}{Algorithms Used}{chapter.2}% 14
+\BOOKMARK [0][-]{chapter.3}{Methodology}{}% 15
+\BOOKMARK [1][-]{section.3.1}{Environment}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.2}{Workflow}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.3}{Dataset}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.4}{Cleaning the Dataset}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.5}{Feature Selection}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.6}{Performance Parameters}{chapter.3}% 21
+\BOOKMARK [0][-]{chapter.4}{Results and Observations}{}% 22
+\BOOKMARK [0][-]{chapter.5}{Conclusion}{}% 23
+\BOOKMARK [1][-]{section.5.1}{Useful features in Intrusion Detection}{chapter.5}% 24
+\BOOKMARK [1][-]{section.5.2}{Notes about the different models}{chapter.5}% 25
+\BOOKMARK [1][-]{section.5.3}{Scope}{chapter.5}% 26
+\BOOKMARK [0][-]{section*.39}{Appendices}{}% 27
+\BOOKMARK [0][-]{appendix.A}{Code}{}% 28
+\BOOKMARK [1][-]{section.A.1}{Feature Selection}{appendix.A}% 29
+\BOOKMARK [1][-]{section.A.2}{Data Preprocessing}{appendix.A}% 30
+\BOOKMARK [1][-]{section.A.3}{Evaluation Script}{appendix.A}% 31
+\BOOKMARK [1][-]{section.A.4}{General script format for testing with all features}{appendix.A}% 32
+\BOOKMARK [1][-]{section.A.5}{General script format for testing with the two selected features}{appendix.A}% 33
+\BOOKMARK [0][-]{appendix.B}{Trace Files}{}% 34
+\BOOKMARK [1][-]{section.B.1}{General Trace Format}{appendix.B}% 35
+\BOOKMARK [0][-]{section.B.1}{References}{}% 36
+\BOOKMARK [0][-]{appendix*.40}{ProjectDetail}{}% 37

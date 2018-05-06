@@ -1,4 +1,5 @@
 import time
+import sys
 from data_preprocessing_unsw import import_and_clean
 from evaluation import evaluate
 from sklearn.ensemble import RandomForestClassifier
@@ -6,7 +7,7 @@ from sklearn.ensemble import RandomForestClassifier
 train = import_and_clean("UNSW-NB15_1.csv")
 test = import_and_clean("UNSW-NB15_2.csv")
 
-rfc = RandomForestClassifier(max_depth = 2)
+rfc = RandomForestClassifier(max_depth = int(sys.argv[1]))
 
 print("training...")
 start = time.time()

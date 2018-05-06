@@ -1,0 +1,9 @@
+# Fdb version 3
+["pdflatex"] 1525523947 "ch3.tex" "ch3.pdf" "ch3" 1525523947
+  "/usr/share/texmf-dist/web2c/texmf.cnf" 1520157258 32585 d82bbcf7626b7842c87671687479e852 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1520406598 7738160 0923961d4e72b2514cebd927a2d4ba99 ""
+  "ch3.aux" 1525523874 1419 faec06a08e0c2cf901a5b3429ca37137 ""
+  "ch3.tex" 1525523946 571 a28495e696e4f45e06b9173fd36ddbef ""
+  (generated)
+  "ch3.pdf"
+  "ch3.log"

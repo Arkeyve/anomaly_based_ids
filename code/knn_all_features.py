@@ -1,4 +1,5 @@
 import time
+import sys
 from data_preprocessing_unsw import import_and_clean
 from evaluation import evaluate
 from sklearn.neighbors import KNeighborsClassifier
@@ -6,7 +7,7 @@ from sklearn.neighbors import KNeighborsClassifier
 train = import_and_clean("UNSW-NB15_1.csv")
 test = import_and_clean("UNSW-NB15_2.csv")
 
-knn = KNeighborsClassifier(n_neighbors = 1)
+knn = KNeighborsClassifier(n_neighbors = int(sys.argv[1]))
 
 print("training...")
 start = time.time()

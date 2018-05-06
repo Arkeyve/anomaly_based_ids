@@ -2,9 +2,14 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Types of IDS as mentioned in \cite {ids_taxonomy}}}{6}{figure.2.1}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Feature importance}}{16}{figure.3.1}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Change in TTF of different models (lower is better)}}{19}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Change in TTP of different models (lower is better)}}{20}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Change in Accuracy of different models (higher is better)}}{21}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Change in TS of different models (higher is better)}}{23}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Change in PS of different models (higher is better)}}{23}{figure.4.5}
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Decision Tree with max-depth = 2 tested with 2 features}}{25}{figure.5.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

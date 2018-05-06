@@ -35,4 +35,43 @@ P.~V.~S. Alpaño, J.~R.~I. Pedrasa, and R.~Atienza, ``Multilayer perceptron
   systems,'' in \emph{TENCON 2017 - 2017 IEEE Region 10 Conference}, Nov 2017,
   pp. 2825--2829.
 
+\bibitem{kdd99}
+M.~Tavallaee, E.~Bagheri, W.~Lu, and A.~A. Ghorbani, ``A detailed analysis of
+  the kdd cup 99 data set,'' in \emph{2009 IEEE Symposium on Computational
+  Intelligence for Security and Defense Applications}, July 2009, pp. 1--6.
+
+\bibitem{unsw15}
+N.~Moustafa and J.~Slay, ``Unsw-nb15: a comprehensive data set for network
+  intrusion detection systems (unsw-nb15 network data set),'' in \emph{2015
+  Military Communications and Information Systems Conference (MilCIS)}, Nov
+  2015, pp. 1--6.
+
+\bibitem{unsw_comparison}
+------, ``The significant features of the unsw-nb15 and the kdd99 data sets for
+  network intrusion detection systems,'' in \emph{2015 4th International
+  Workshop on Building Analysis Datasets and Gathering Experience Returns for
+  Security (BADGERS)}, Nov 2015, pp. 25--31.
+
+\bibitem{scikit-learn}
+F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
+  M.~Blondel, P.~Prettenhofer, R.~Weiss, V.~Dubourg, J.~Vanderplas, A.~Passos,
+  D.~Cournapeau, M.~Brucher, M.~Perrot, and E.~Duchesnay, ``Scikit-learn:
+  Machine learning in {P}ython,'' \emph{Journal of Machine Learning Research},
+  vol.~12, pp. 2825--2830, 2011.
+
+\bibitem{nb_optimal}
+H.~Zhang, ``The optimality of naive bayes,'' 01 2004.
+
+\bibitem{random_forest}
+T.~K. Ho, ``Random decision forests,'' in \emph{Proceedings of 3rd
+  International Conference on Document Analysis and Recognition}, vol.~1, Aug
+  1995, pp. 278--282 vol.1.
+
+\bibitem{extra_tree}
+\BIBentryALTinterwordspacing
+P.~Geurts, D.~Ernst, and L.~Wehenkel, ``Extremely randomized trees,''
+  \emph{Machine Learning}, vol.~63, no.~1, pp. 3--42, Apr 2006. [Online].
+  Available: \url{https://doi.org/10.1007/s10994-006-6226-1}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}

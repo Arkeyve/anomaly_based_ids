@@ -1,504 +1,172 @@
 \begin{appendix}
 
-\chapter{Code (if required)}
-\section{Kerberos Protocol}
+\chapter{Code}
+\section{Feature Selection}
 \scriptsize{
 \begin{verbatim}
-MODULE main
+    import numpy as np
+    import matplotlib.pyplot as plt
+    from sklearn.ensemble import ExtraTreesClassifier
+    from data_preprocessing_unsw import import_and_clean
 
-VAR
+    ds = import_and_clean("UNSW-NB15_3.csv")
 
---Creating agents which are to type agtype
-agA : agtype; 
-agB : agtype;
-agS : agtype;
-agI : agtype;
-Iactive: boolean;
+    model = ExtraTreesClassifier()
 
---Assigning initial to values to all variables
+    model.fit(ds.iloc[:, :-2], ds.iloc[:, -1])
 
-ASSIGN
-init(agA.state):=wait;
-init(agB.state):=wait;
-init(agS.state):=wait;
-init(agI.state):=wait;
-init(agA.count):=0;
-init(agB.count):=0;
-init(agS.count):=0;
-init(agI.count):=0;
-init(agA.authenticated):=FALSE;
-init(agB.authenticated):=FALSE;
-init(agI.authenticated):=FALSE;
-init(agS.authenticated):=TRUE;
-
---Transitions for the variable indicating presence or absence of intruder
-
-next(Iactive):=
-case
-!Iactive:{0,1};
-Iactive & agI.state=receive4beta:{0,1};
-1:Iactive;
-esac;
-
---Transitions for agent A's state
-
-next(agA.state):=
-case
-agA.state=wait: send1;
-agS.state=send2 & agA.state=send1: receive2;
-agA.state=receive2: send3alpha;
-agB.state=send4alpha & agA.state=send3alpha: receive4alpha;
-agA.state=receive4alpha: wait;
-1:agA.state;
-esac;
-
---Transitions for agent B's state
-
-next(agB.state):=
-case
-agA.state=send3alpha & agB.state=wait: receive3alpha;
-agI.state=send3beta & agB.state=wait & Iactive: receive3beta;
-agI.state=send3beta & agB.state=send4alpha & Iactive: receive3beta;
-agB.state=receive3alpha:send4alpha;
-agB.state=receive3beta:send4beta;
-agB.state=send4alpha:wait;
-1:agB.state;
-esac;
-
---Transitions for Server S's state
-
-next(agS.state):=
-case
-agA.state=send1 & agS.state=wait: receive1;
-agS.state=receive1:send2;
-agS.state=send2:wait;
-1:agS.state;
-esac;
-
---Transitions for the Intruder's state
-
-next(agI.state):=
-case
-agI.state=wait & agA.state=send3alpha & agB.state=wait & Iactive: receive3beta;
-agI.state=receive3beta & Iactive: send3beta;
-agI.state=send3beta & agB.state=send4beta & Iactive  : receive4beta;
-agI.state=receive4beta & Iactive: wait;
-1:agI.state;
-esac;
-
---Transitions for Agent A's counter
-
-next(agA.count):=
-case
-agA.state=send1|agA.state=receive2: agA.count;
-agA.state=send3alpha & agA.count<1:agA.count+1;
-agA.count=1 & agA.state=receive2: 0;
-1:agA.count;
-esac;
-
---Transitions for Agent B's counter
-
-next(agB.count):=
-case
-agB.state=receive3beta & agB.count<2|agB.state=receive3alpha & agB.count<2: agB.count+1;
-agB.state=send4alpha |agB.state=send4beta:agB.count;
-agB.count=1 & agA.state=receive4alpha & !Iactive:0;
-agB.count=2 & agA.state=send3alpha|agB.count=1 & agA.state=send3alpha: 0;
-1:agB.count;
-esac;
-
---Transitions for Agent I's counter
-
-next(agI.count):=
-case
-agI.state=receive3beta & agI.count<2 & Iactive:agI.count+1;
-agI.state=send3beta & Iactive:agI.count;
-agI.state=receive4beta & agI.count<2 & Iactive: agI.count+1;
-agI.count=2: 0;
-1:agI.count;
-esac;
-
---Transitions for variable indicating agent A's authentication
-
-next(agA.authenticated):=
-case
-agA.state=receive4alpha :TRUE;
-1:agA.authenticated;
-esac;
-
---Transitions for variable indicating agent B's authentication
-
-next(agB.authenticated):=
-case
-agB.state=send4alpha |agB.state=send4beta :TRUE;
-1:agB.authenticated;
-esac;
-
---Transitions for variable indicating agent B's authentication which 
---indicates that it has received the fourth message
-
-next(agI.authenticated):=
-case
-agI.state=receive4beta :TRUE;
-1:agI.authenticated;
-esac;
-
---Agent S always is authenticated so transitions to the false state do not occur
-
-next(agS.authenticated):=
-case
-1:agS.authenticated;
-esac;
-
---Specifications which detect the presence of replay attack
-
---Agent B should not receive more messages than what agent A has sent it
---SPEC AG!(agA.count < agB.count);
-
---Agent I should never receive the fourth message
-SPEC AG!(agI.state=receive4beta);
-
---Module for each agent's type which includes the agent's state variable, 
---its counter and its authentication variable
-
-MODULE agtype
-
-VAR
-state: {wait, send1, receive1, send2,receive2, 
-send3alpha, send3beta, receive3alpha, receive3beta, 
-send4alpha,send4beta, receive4alpha, receive4beta };
-count:{0,1,2};
-authenticated:boolean;
-
+    plt.bar(np.arange(47), model.feature_importances_)
+    plt.xlabel("Features")
+    plt.ylabel("Importance")
+    plt.show()
 \end{verbatim}
 
 
-\section{Kerberos Protocol with Freshness Concept}
+\section{Data Preprocessing}
 \begin{verbatim}
-MODULE main
+    import pandas as pd
+    import numpy as np
 
-VAR
+    features = pd.read_csv("../dataset/UNSW-NB15_features.csv")
 
---Creating agents which are to type agtype
-agA : agtype; 
-agB : agtype;
-agS : agtype;
-agI : agtype;
-Iactive: boolean;
-Fresh:0..20;
-Time:0..20;
+    def import_and_clean(dataset):
+        print("importing", dataset, "...")
+        data = pd.read_csv("../dataset/" + dataset, low_memory=False)
+        data.columns = features.iloc[:, 1]
+        print("filling blank entries...")
+        data = data.fillna(0)
 
---Assigning initial to values to all variables
- 
-ASSIGN
-init(agA.state):=wait;
-init(agB.state):=wait;
-init(agS.state):=wait;
-init(agI.state):=wait;
-init(agA.count):=0;
-init(agB.count):=0;
-init(agS.count):=0;
-init(agI.count):=0;
-init(agA.authenticated):=FALSE;
-init(agB.authenticated):=FALSE;
-init(agI.authenticated):=FALSE;
-init(agS.authenticated):=TRUE;
-init(Fresh):=0;
-init(Time):=0;
+        print("converting nominal data to numeric...")
+        cols = data.select_dtypes('object').columns
+        data[cols] = data[cols].apply(lambda x: x.astype('category').cat.codes)
 
---Transitions for the variable indicating presence or absence of intruder
+        return data
+\end{verbatim}
 
-next(Iactive):=
-case
-!Iactive:{0,1};
-Iactive & agI.state=receive4beta:{0,1};
-1:Iactive;
-esac;
+\section{Evaluation Script}
+\begin{verbatim}
+    def evaluate(classification_result, labels):
+        comparison = list(zip(classification_result, labels))
 
---Transitions for agent A's state
+        result = {
+            (0, 0): 0,
+            (0, 1): 0,
+            (1, 0): 0,
+            (1, 1): 0
+        }
 
-next(agA.state):=
-case
-agA.state=wait: send1;
-agS.state=send2 & agA.state=send1: receive2;
-agA.state=receive2: send3alpha;
-agB.state=send4alpha & agA.state=send3alpha: receive4alpha;
-agA.state=receive4alpha: wait;
-1:agA.state;
-esac;
+        for res in comparison:
+            result[res] = result[res] + 1
 
---Transitions for agent B's state
+        print("in", classification_result.shape[0], "records, the model predicts")
+        print("True Negative:\t", result[(0, 0)])
+        print("False Negative:\t", result[(0, 1)])
+        print("False Positive:\t", result[(1, 0)])
+        print("True Positive:\t", result[(1, 1)])
+        accuracy = (result[(1, 1)] + result[(0, 0)]) / (result[(0, 0)] + result[(0, 1)] + result[(1, 0)] + result[(1, 1)])
+        print("accuracy = \t", accuracy)
+\end{verbatim}
 
-next(agB.state):=
-case
-agA.state=send3alpha & agB.state=wait & Fresh=0: receive3alpha;
-agI.state=send3beta & agB.state=wait & Iactive & Fresh=0: receive3beta;
-agI.state=send3beta & agB.state=send4alpha & Iactive & Fresh=0: receive3beta;
-agB.state=receive3alpha:send4alpha;
-agB.state=receive3beta:send4beta;
-agB.state=send4alpha:wait;
-1:agB.state;
-esac;
+\section{General script format for testing with all features}
+\begin{verbatim}
+    import time
+    import sys
+    import graphviz
+    from data_preprocessing_unsw import import_and_clean
+    from evaluation import evaluate
+    from sklearn import tree
 
---Transitions for Server S's state
+    train = import_and_clean("UNSW-NB15_1.csv")
+    test = import_and_clean("UNSW-NB15_2.csv")
 
-next(agS.state):=
-case
-agA.state=send1 & agS.state=wait: receive1;
-agS.state=receive1:send2;
-agS.state=send2:wait;
-1:agS.state;
-esac;
+    dtc = tree.DecisionTreeClassifier(max_depth = int(sys.argv[1]))
 
---Transitions for the Intruder's state
+    print("training...")
+    start = time.time()
+    dtc.fit(train.iloc[:, :-2], train.iloc[:, -1])
+    end = time.time()
 
-next(agI.state):=
-case
-agI.state=wait & agA.state=send3alpha & agB.state=wait & Iactive: receive3beta;
-agI.state=receive3beta & Iactive: send3beta;
-agI.state=send3beta & agB.state=send4beta & Iactive  : receive4beta;
-agI.state=receive4beta & Iactive: wait;
-agI.state=send3beta & Time>2: wait;
-1:agI.state;
-esac;
+    ttf = (end - start)
 
---Transitions for Agent A's counter
+    print("testing...")
+    start = time.time()
+    y_dtc = dtc.predict(test.iloc[:, :-2])
+    end = time.time()
 
-next(agA.count):=
-case
-agA.state=send1|agA.state=receive2: agA.count;
-agA.state=send3alpha & agA.count<1:agA.count+1;
-agA.count=1 & agA.state=receive2: 0;
-1:agA.count;
-esac;
+    ttp = (end - start)
 
---Transitions for Agent B's counter
+    print("evaluating...")
+    evaluate(y_dtc, test.iloc[:, -1])
 
-next(agB.count):=
-case
-agB.state=receive3beta & agB.count<2|agB.state=receive3alpha & agB.count<2: agB.count+1;
-agB.state=send4alpha|agB.state=send4beta:agB.count;
-agB.count=1 & agA.state=receive4alpha & !Iactive:0;
-agB.count=2 & agA.state=send3alpha|agB.count=1 & agA.state=send3alpha: 0;
-1:agB.count;
-esac;
+    print("ttf = \t\t", ttf)
+    print("ttp = \t\t", ttp)
 
---Transitions for Agent I's counter
+    dot_data = tree.export_graphviz(dtc, out_file=None, feature_names=train.columns[:-2], class_names=['normal', 'attack'], filled=True, special_characters=True)
+    graph = graphviz.Source(dot_data)
+    graph.render("./results/dtc_clf_md" + str(sys.argv[1]) + "_all_features")
+\end{verbatim}
 
-next(agI.count):=
-case
-agI.state=receive3beta & agI.count<2 & Iactive:agI.count+1;
-agI.state=send3beta & Iactive:agI.count;
-agI.state=receive4beta & agI.count<2 & Iactive: agI.count+1;
-agI.count=2: 0;
-1:agI.count;
-esac;
+\section{General script format for testing with the two selected features}
+\begin{verbatim}
+    import time
+    import sys
+    import graphviz
+    from data_preprocessing_unsw import import_and_clean
+    from evaluation import evaluate
+    from sklearn import tree
 
---Transitions for variable indicating agent A's authentication
+    train = import_and_clean("UNSW-NB15_1.csv")
+    test = import_and_clean("UNSW-NB15_2.csv")
 
-next(agA.authenticated):=
-case
-agA.state=receive4alpha :TRUE;
-1:agA.authenticated;
-esac;
+    dtc = tree.DecisionTreeClassifier(max_depth = int(sys.argv[1]))
 
---Transitions for variable indicating agent B's authentication
+    print("training...")
+    start = time.time()
+    dtc.fit(train.iloc[:, [9, 36]], train.iloc[:, -1])
+    end = time.time()
 
-next(agB.authenticated):=
-case
-agB.state=send4alpha|agB.state=send4beta :TRUE;
-1:agB.authenticated;
-esac;
+    ttf = (end - start)
 
---Transitions for variable indicating agent B's authentication which 
---indicates that it has received the fourth message
+    print("testing...")
+    start = time.time()
+    y_dtc = dtc.predict(test.iloc[:, [9, 36]])
+    end = time.time()
 
-next(agI.authenticated):=
-case
-agI.state=receive4beta :TRUE;
-1:agI.authenticated;
-esac;
+    ttp = (end - start)
 
---Agent S always is authenticated so transitions to the false state do not occur
+    print("evaluating...")
+    evaluate(y_dtc, test.iloc[:, -1])
 
-next(agS.authenticated):=
-case
-1:agS.authenticated;
-esac;
+    print("ttf = \t\t", ttf)
+    print("ttp = \t\t", ttp)
 
---Transitions for the freshness variable
-
-next(Fresh):=
-case
-agA.state=send3alpha & agB.state=wait:0;
-Fresh<20:Fresh+1;
-1:0;
-esac;
-
---Transitions for the Intruder's timer variable
-
-next(Time):=
-case
-agI.state=receive3beta:0;
-Time<20:Time+1;
-1:0;
-esac;
-
---Specifications which detect the presence of replay attack
-
---Agent B should not receive more messages than what agent A has sent it
-SPEC AG!(agA.count < agB.count);
-
---Agent I should never receive the fourth message
-SPEC AG!(agI.state=receive4beta);
-
---Module for each agent's type which includes the agent's state variable, 
---its counter and its authentication variable
-
-MODULE agtype
-
-VAR
-state:{wait, send1, receive1, send2,receive2, 
-send3alpha, send3beta, receive3alpha, receive3beta, 
-send4alpha, send4beta, receive4alpha, receive4beta};
-count:{0,1,2};
-authenticated:boolean;
-
+    dot_data = tree.export_graphviz(dtc, out_file=None, feature_names=['sttl', 'ct_state_ttl'], class_names=['normal', 'attack'], filled=True, special_characters=True)
+    graph = graphviz.Source(dot_data)
+    graph.render("./results/dtc_clf_md" + str(sys.argv[1]) + "_2_features")
 \end{verbatim}
 
 \chapter{Trace Files}
 
-\section{Replay Attack}
+\section{General Trace Format}
 \begin{verbatim}
--- specification AG !(agA.count < agB.count)  is false
--- as demonstrated by the following execution sequence
-Trace Description: CTL Counterexample 
-Trace Type: Counterexample 
--> State: 1.1 <-
-  agA.state = wait
-  agA.count = 0
-  agA.authenticated = 0
-  agB.state = wait
-  agB.count = 0
-  agB.authenticated = 0
-  agS.state = wait
-  agS.count = 0
-  agS.authenticated = 1
-  agI.state = wait
-  agI.count = 0
-  agI.authenticated = 0
-  Iactive = 0
--> Input: 1.2 <-
--> State: 1.2 <-
-  agA.state = send1
-  agS.count = 2
--> Input: 1.3 <-
--> State: 1.3 <-
-  agS.state = receive1
--> Input: 1.4 <-
--> State: 1.4 <-
-  agS.state = send2
--> Input: 1.5 <-
--> State: 1.5 <-
-  agA.state = receive2
-  agS.state = wait
--> Input: 1.6 <-
--> State: 1.6 <-
-  agA.state = send3alpha
-  Iactive = 1
--> Input: 1.7 <-
--> State: 1.7 <-
-  agA.count = 1
-  agB.state = receive3alpha
-  agI.state = receive3beta
--> Input: 1.8 <-
--> State: 1.8 <-
-  agB.state = send4alpha
-  agB.count = 1
-  agI.state = send3beta
-  agI.count = 1
--> Input: 1.9 <-
--> State: 1.9 <-
-  agA.state = receive4alpha
-  agB.state = receive3beta
-  agB.authenticated = 1
--> Input: 1.10 <-
--> State: 1.10 <-
-  agA.state = wait
-  agA.authenticated = 1
-  agB.state = send4beta
-  agB.count = 2
--- specification AG !(agI.state = receive4beta)  is false
--- as demonstrated by the following execution sequence
-Trace Description: CTL Counterexample 
-Trace Type: Counterexample 
--> State: 2.1 <-
-  agA.state = wait
-  agA.count = 0
-  agA.authenticated = 0
-  agB.state = wait
-  agB.count = 0
-  agB.authenticated = 0
-  agS.state = wait
-  agS.count = 0
-  agS.authenticated = 1
-  agI.state = wait
-  agI.count = 0
-  agI.authenticated = 0
-  Iactive = 0
--> Input: 2.2 <-
--> State: 2.2 <-
-  agA.state = send1
-  agS.count = 2
--> Input: 2.3 <-
--> State: 2.3 <-
-  agS.state = receive1
--> Input: 2.4 <-
--> State: 2.4 <-
-  agS.state = send2
--> Input: 2.5 <-
--> State: 2.5 <-
-  agA.state = receive2
-  agS.state = wait
--> Input: 2.6 <-
--> State: 2.6 <-
-  agA.state = send3alpha
-  Iactive = 1
--> Input: 2.7 <-
--> State: 2.7 <-
-  agA.count = 1
-  agB.state = receive3alpha
-  agI.state = receive3beta
--> Input: 2.8 <-
--> State: 2.8 <-
-  agB.state = send4alpha
-  agB.count = 1
-  agI.state = send3beta
-  agI.count = 1
--> Input: 2.9 <-
--> State: 2.9 <-
-  agA.state = receive4alpha
-  agB.state = receive3beta
-  agB.authenticated = 1
--> Input: 2.10 <-
--> State: 2.10 <-
-  agA.state = wait
-  agA.authenticated = 1
-  agB.state = send4beta
-  agB.count = 2
--> Input: 2.11 <-
--> State: 2.11 <-
-  agA.state = send1
-  agI.state = receive4beta
-
-\end{verbatim}
-
-\section{Replay Attack overcome using Freshness Concept}
-
-\begin{verbatim}
--- specification AG !(agA.count < agB.count)  is true
--- specification AG !(agI.state = receive4beta)  is true
-
+$ python decision_tree_all_features.py 2
+    importing UNSW-NB15_1.csv ...
+    filling blank entries...
+    converting nominal data to numeric...
+    importing UNSW-NB15_2.csv ...
+    filling blank entries...
+    converting nominal data to numeric...
+    training...
+    testing...
+    evaluating...
+    in 700000 records, the model predicts
+    True Negative:	 638630
+    False Negative:	 248
+    False Positive:	 8621
+    True Positive:	 52501
+    accuracy = 	 0.98733
+    ttf = 		 3.5196142196655273
+    ttp = 		 0.29450440406799316
 \end{verbatim}
 
 }

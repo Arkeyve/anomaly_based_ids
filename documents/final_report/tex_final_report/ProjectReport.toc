@@ -69,4 +69,4 @@
 \contentsline {chapter}{\numberline {B}Trace Files}{32}{appendix.B}
 \contentsline {section}{\numberline {B.1}General Trace Format}{32}{section.B.1}
 \contentsline {chapter}{References}{33}{section.B.1}
-\contentsline {chapter}{ProjectDetail}{34}{appendix*.40}
+\contentsline {chapter}{Project Detail}{34}{appendix*.40}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.3.7)  7 MAY 2018 12:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.3.7)  7 MAY 2018 12:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -532,16 +532,17 @@ Missing character: There is no ™ in font cmr12!
 
  (./Chapter3/ch3.tex
 Chapter 3.
-<Chapter3/workflow.png, id=397, 121.45375pt x 462.72874pt>
-File: Chapter3/workflow.png Graphic file (type png)
-<use Chapter3/workflow.png>
-Package pdftex.def Info: Chapter3/workflow.png  used on input line 39.
-(pdftex.def)             Requested size: 79.49577pt x 302.86714pt.
 [14
 
 
 
-] [15 <./Chapter3/workflow.png>]
+]
+<Chapter3/workflow.png, id=403, 121.45375pt x 462.72874pt>
+File: Chapter3/workflow.png Graphic file (type png)
+<use Chapter3/workflow.png>
+Package pdftex.def Info: Chapter3/workflow.png  used on input line 39.
+(pdftex.def)             Requested size: 79.49577pt x 302.86714pt.
+ [15 <./Chapter3/workflow.png>]
 <Chapter3/feature_importance.png, id=417, 987.2082pt x 530.4618pt>
 File: Chapter3/feature_importance.png Graphic file (type png)
 <use Chapter3/feature_importance.png>
@@ -692,7 +693,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  28i,10n,43p,1441b,564s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on ProjectReport.pdf (47 pages, 536854 bytes).
+Output written on ProjectReport.pdf (47 pages, 537252 bytes).
 PDF statistics:
  646 PDF objects out of 1000 (max. 8388607)
  562 compressed objects within 6 object streams

@@ -2,7 +2,7 @@
 \label{ch:SC}
 
 \paragraph{}
-The KNN Classifier was tested with the value of k = 1 to reduce the number of computations as much as possible to fasten the process. All decision tree based classifiers have been tested with max\_depth = 2 and 4. This parameter defines how deep the tree can build itself. In the case of DecisionTreeClassifier, max\_depth = None has also been considered. The execution time and accuracy for each model is presented in Table \ref{res_all} and Table \ref{res_2}
+The KNN Classifier was tested with the value of k = 1 to reduce the number of computations as much as possible to speed up the process. All decision tree based classifiers have been tested with max\_depth = 2 and 4. This parameter defines how deep the tree can build itself. In the case of DecisionTreeClassifier, max\_depth = None has also been considered. The execution time and accuracy for each model is presented in Table \ref{res_all} and Table \ref{res_2}
 
 \begin{table}[h]
     \caption{Execution times of different models with all features}
@@ -84,7 +84,7 @@ To understand the difference in the performance of these models, a better visual
 \end{figure}
 
 \paragraph{}
-It is clear from these results that selecting the 2 features in Section \ref{feature_select} resulted in radically reduced execution times, especially for KNN (77.812 seconds reduced), without negatively affecting to the accuracy of the models. Most models see only slight change in accuracy, but the change itself is usually positive. The reduction in execution time resulted in significant improvement in the Training and Prediction Scores (Table \ref{final_scores}).
+It is clear from these results that selecting the 2 features mentioned in Section \ref{feature_select} resulted in radically reduced execution times, especially for KNN (77.812 seconds reduced), without negatively affecting to the accuracy of the models. Most models see only slight change in accuracy, but the change itself is usually positive. The reduction in execution time resulted in significant improvement in the Training and Prediction Scores (Table \ref{final_scores}).
 
 \begin{table}
     \caption{Training and Prediction Scores}
@@ -164,7 +164,7 @@ It is clear from these results that selecting the 2 features in Section \ref{fea
 \end{table}
 
 \paragraph{}
-The data in Table \ref{final_scores} is presented in Figure \ref{ps_improvement} and Figure \ref{ts_improvement} for visualizing the change in the Training and Prediction Scores. It is evident from these results that the two selected features in the dataset are indeed contributing the most in the classification. Accuracy and execution time improved upon ignoring the other features. The time reduction is simply because there are less dimensions in the feature space for the models to process, while the accuracy improvement may suggest that the other features had a slight negative contribution in the classification. A closer look at the confusion matrix results (Table \ref{confusion matrix}) suggests that, although the overall accuracy has improved, the false positive rate in most cases has increased.
+The data in Table \ref{final_scores} is presented in Figure \ref{ps_improvement} and Figure \ref{ts_improvement} for visualizing the change in the Training and Prediction Scores. It is evident from these results that the two selected features in the dataset are indeed contributing the most in the classification. Accuracy and execution time improved upon ignoring the other features. The time reduction is because there are less dimensions in the feature space for the models to process, while the accuracy improvement may suggest that the other features had a slight negative contribution in the classification. A closer look at the confusion matrix results (Table \ref{confusion_matrix}) suggests that, although the overall accuracy has improved, the false positive rate in most cases has increased.
 
 \begin{figure}[h]
     \hfill\includegraphics[width=1\textwidth]{Chapter4/ts_improvement}\hspace*{\fill}

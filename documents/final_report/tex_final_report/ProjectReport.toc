@@ -4,7 +4,7 @@
 \contentsline {chapter}{List of Figures}{ix}{chapter*.3}
 \contentsline {chapter}{Abbreviations}{ix}{chapter*.3}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
-\contentsline {section}{\numberline {1.1}Background}{1}{section.1.1}
+\contentsline {section}{\numberline {1.1}Overview}{1}{section.1.1}
 \contentsline {paragraph}{}{1}{section*.4}
 \contentsline {paragraph}{}{1}{section*.5}
 \contentsline {paragraph}{}{2}{section*.6}
@@ -37,36 +37,39 @@
 \contentsline {paragraph}{}{15}{section*.23}
 \contentsline {section}{\numberline {3.3}Dataset}{15}{section.3.3}
 \contentsline {paragraph}{}{15}{section*.24}
-\contentsline {section}{\numberline {3.4}Cleaning the Dataset}{15}{section.3.4}
-\contentsline {paragraph}{}{15}{section*.25}
+\contentsline {section}{\numberline {3.4}Cleaning the Dataset}{16}{section.3.4}
+\contentsline {paragraph}{}{16}{section*.25}
 \contentsline {section}{\numberline {3.5}Feature Selection}{16}{section.3.5}
 \contentsline {paragraph}{}{16}{section*.26}
 \contentsline {paragraph}{}{16}{section*.27}
-\contentsline {paragraph}{}{17}{section*.28}
+\contentsline {paragraph}{}{16}{section*.28}
 \contentsline {section}{\numberline {3.6}Performance Parameters}{17}{section.3.6}
 \contentsline {paragraph}{}{17}{section*.29}
-\contentsline {paragraph}{}{17}{section*.30}
-\contentsline {chapter}{\numberline {4}Results and Observations}{18}{chapter.4}
-\contentsline {paragraph}{}{18}{section*.31}
-\contentsline {paragraph}{}{19}{section*.32}
-\contentsline {paragraph}{}{19}{section*.33}
-\contentsline {paragraph}{}{20}{section*.34}
-\contentsline {chapter}{\numberline {5}Conclusion}{24}{chapter.5}
-\contentsline {section}{\numberline {5.1}Useful features in Intrusion Detection}{24}{section.5.1}
-\contentsline {paragraph}{}{24}{section*.35}
-\contentsline {section}{\numberline {5.2}Notes about the different models}{24}{section.5.2}
-\contentsline {paragraph}{}{24}{section*.36}
-\contentsline {section}{\numberline {5.3}Scope}{26}{section.5.3}
-\contentsline {paragraph}{}{26}{section*.37}
-\contentsline {paragraph}{}{26}{section*.38}
-\contentsline {chapter}{Appendices}{27}{section*.39}
-\contentsline {chapter}{\numberline {A}Code}{28}{appendix.A}
-\contentsline {section}{\numberline {A.1}Feature Selection}{28}{section.A.1}
-\contentsline {section}{\numberline {A.2}Data Preprocessing}{28}{section.A.2}
-\contentsline {section}{\numberline {A.3}Evaluation Script}{29}{section.A.3}
-\contentsline {section}{\numberline {A.4}General script format for testing with all features}{29}{section.A.4}
-\contentsline {section}{\numberline {A.5}General script format for testing with the two selected features}{30}{section.A.5}
-\contentsline {chapter}{\numberline {B}Trace Files}{32}{appendix.B}
-\contentsline {section}{\numberline {B.1}General Trace Format}{32}{section.B.1}
-\contentsline {chapter}{References}{33}{section.B.1}
-\contentsline {chapter}{Project Detail}{34}{appendix*.40}
+\contentsline {paragraph}{}{18}{section*.30}
+\contentsline {chapter}{\numberline {4}Results and Observations}{19}{chapter.4}
+\contentsline {paragraph}{}{19}{section*.31}
+\contentsline {paragraph}{}{20}{section*.32}
+\contentsline {paragraph}{}{20}{section*.33}
+\contentsline {paragraph}{}{21}{section*.34}
+\contentsline {chapter}{\numberline {5}Result Analysis and Conclusion}{25}{chapter.5}
+\contentsline {section}{\numberline {5.1}Result Analysis}{25}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Useful features in Intrusion Detection}{25}{subsection.5.1.1}
+\contentsline {paragraph}{}{25}{section*.35}
+\contentsline {subsection}{\numberline {5.1.2}Notes about the different models}{25}{subsection.5.1.2}
+\contentsline {paragraph}{}{25}{section*.36}
+\contentsline {section}{\numberline {5.2}Conclusion}{27}{section.5.2}
+\contentsline {paragraph}{}{27}{section*.37}
+\contentsline {subsection}{\numberline {5.2.1}Future Scope}{27}{subsection.5.2.1}
+\contentsline {paragraph}{}{27}{section*.38}
+\contentsline {paragraph}{}{27}{section*.39}
+\contentsline {chapter}{Appendices}{28}{section*.40}
+\contentsline {chapter}{\numberline {A}Code}{29}{appendix.A}
+\contentsline {section}{\numberline {A.1}Feature Selection}{29}{section.A.1}
+\contentsline {section}{\numberline {A.2}Data Preprocessing}{29}{section.A.2}
+\contentsline {section}{\numberline {A.3}Evaluation Script}{30}{section.A.3}
+\contentsline {section}{\numberline {A.4}General script format for testing with all features}{30}{section.A.4}
+\contentsline {section}{\numberline {A.5}General script format for testing with the two selected features}{31}{section.A.5}
+\contentsline {chapter}{\numberline {B}Trace Files}{33}{appendix.B}
+\contentsline {section}{\numberline {B.1}General Trace Format}{33}{section.B.1}
+\contentsline {chapter}{References}{34}{section.B.1}
+\contentsline {chapter}{Project Detail}{35}{appendix*.41}

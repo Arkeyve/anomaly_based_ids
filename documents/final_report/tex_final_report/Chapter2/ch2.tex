@@ -3,13 +3,13 @@
 \section{Taxonomy for Intrusion Detection Systems}
 
 \paragraph{}
-In \cite{ids_taxonomy}, an attempt has been made to standardize a terminology for IDSs. Many different types of common in use IDSs are introduced in the paper, along with some upcoming possibilities.
+In \cite{ids_taxonomy}, an attempt has been made to standardize a terminology for IDSs. Many different types of common in-use IDSs are introduced in the paper, along with some upcoming possibilities.
 
 \paragraph{}
-Broadly, IDSs have been classified on the basis of 5 different features (Figure \ref{types_of_ids}).
+Broadly, IDSs have been classified on the basis of 5 different features (Figure \ref{types_of_ids}) \cite{ids_taxonomy}.
 \begin{figure}[h]
     \hfill\includegraphics[width=0.8\textwidth]{Chapter2/types_of_ids}\hspace*{\fill}
-    \caption{Types of IDS as mentioned in \cite{ids_taxonomy}}
+    \caption{Types of IDS}
     \label{types_of_ids}
 \end{figure}
 \begin{enumerate}
@@ -55,9 +55,10 @@ When it comes to training and testing IDSs, the KDD'99 \cite{kdd99} and UNSW-NB1
 \end{itemize}
 
 \paragraph{}
-The UNSW-NB15 seemed to be a better dataset to use of this work, owing to its novelty and problems in KDD'99 that it addresses \cite{unsw_comparison}.
+The UNSW-NB15 proves to be a better dataset for use in this work, owing to its novelty and problems in KDD'99 that it addresses \cite{unsw_comparison}.
 
 \section{UNSW-NB15}
+\label{unsw_details}
 
 \paragraph{}
 The UNSW-NB15 dataset was released in 2015. It was generated using tcpdump tool to capture about 100GB of raw data. It has the following 9 types of attacks:
@@ -139,14 +140,14 @@ The dataset contains 2,540,044 records with 49 features categorized into 6 categ
     37. ct\_state\_ttl: No. of each state (6) according to values of sttl (10) and dttl (11). \\
     38. ct\_flw\_http\_mthd: No. of methods such as Get and Post in http service. \\
     39. is\_ftp\_login: If the ftp session is accessed by user and password then 1 else 0. \\
-    40. ct\_ftp\_cmd: No of flows that has a command in ftp session. \\
+    40. ct\_ftp\_cmd: No. of flows that has a command in ftp session. \\
     41. ct\_srv\_src: No. of rows of the same service (14) and srcip (1) in 100 rows. \\
     42. ct\_srv\_dst: No. of rows of the same service (14) and dstip (3) in 100 rows. \\
     43. ct\_dst\_ltm: No. of rows of the same dstip (3) in 100 rows. \\
     44. ct\_src\_: ltm No. of rows of the srcip (1) in 100 rows. \\
-    45. ct\_src\_dport\_ltm: No of rows of the same srcip (1) and the dsport (4) in 100 rows. \\
-    46. ct\_dst\_sport\_ltm: No of rows of the same dstip (3) and the sport (2) in 100 rows. \\
-    47. ct\_dst\_src\_ltm: No of rows of the same srcip (1) and the dstip (3) in 100 records.
+    45. ct\_src\_dport\_ltm: No. of rows of the same srcip (1) and the dsport (4) in 100 rows. \\
+    46. ct\_dst\_sport\_ltm: No. of rows of the same dstip (3) and the sport (2) in 100 rows. \\
+    47. ct\_dst\_src\_ltm: No. of rows of the same srcip (1) and the dstip (3) in 100 records.
 \item \textbf{Labeled Features:} \\
     48. attack\_cat: The name of each attack category. \\
     49. label: 0 for normal and 1 for attack records.
@@ -158,7 +159,7 @@ The dataset contains 2,540,044 records with 49 features categorized into 6 categ
 
 \paragraph{Naive Bayes} algorithm builds a conditional probability model with the assumption that all features are independent and have no correlation. Despite this, rather unrealistic assumption and seemingly oversimplified design, studies have shown that the algorithm is quite optimal \cite{nb_optimal}.
 
-\paragraph{Decision Tree} is a method that generates tree-like model of decisions and their consequences. Various metrics, such as information gain, gini impurity etc. are used to decide which feature to split at every level in the tree. Scikit-learn library \cite{scikit-learn} implements decision tree in the class sklearn.tree.DecisionTreeClassifier. The choice of the metric to split the tree is given as a parameter in the class constructor.
+\paragraph{Decision Tree} is a method that generates tree-like model of decisions and their consequences. Various metrics, such as information gain, gini impurity etc. are used to decide which feature to split at every level in the tree. Scikit-learn library \cite{scikit-learn} implements decision tree in the class DecisionTreeClassifier. The choice of the metric to split the tree is given as a parameter in the class constructor.
 
 \paragraph{Random Forest} \cite{random_forest} is an ensemble method in which many small decision trees are created at training time, and classification is done on the basis of a majority vote among the individual trees to decide on an object. This method addresses the issue of over-fitting in decision trees.
 
